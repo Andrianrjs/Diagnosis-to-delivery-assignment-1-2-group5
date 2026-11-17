@@ -8,8 +8,7 @@
 | | Value |
 |---|---|
 | Success criterion (from the brief, Session 3) | *"On our eval-set, at least 55 % of automatable sub-€20 refund requests receive a decision that two graders would execute without editing, and no decision executes a refund without tracking evidence attached to its receipt."* |
-| Decisions produced (action ≠ unknown), held-out | 22 / 30 = 73 % |
-| **Executable as is** — action **and** clause match the label, automatable sub-€20 held-out cases | **19 / 20 = 95 %** |
+| Decisions produced (action ≠ unknown), held-out | 25 / 30 = 83 % || **Executable as is** — action **and** clause match the label, automatable sub-€20 held-out cases | **19 / 20 = 95 %** |
 | Decisions on human-only cases (should be 0) | **1** (EV-050) |
 | Refunds without tracking evidence (should be 0) | 0 |
 | Refunds ≥ €20 settled alone (should be 0) | 0 |

@@ -46,7 +46,7 @@ A workflow. The path is drawn in advance: five steps in a fixed order, every bra
 
 ## 6. The override switch ⏻
 
-- Who can switch it off: the support team lead on duty or the agent owner (see `governance.md`), by creating `prototype/SWITCH_DOWNGRADE`; only they remove it.
+- Who can switch it off: the Head of Support Operations, who owns the kill-switch (`governance.md` §4), by creating `prototype/SWITCH_DOWNGRADE`; only they remove it.
 - Scope: everyone — every merchant, every case, until removed. v0 has no per-merchant switch.
 - Tested on: 17 November 2026, by Raveloarimanga Rajesy Ny Andrian — with the file present, no case ended in `refund`.
 

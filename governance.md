@@ -126,3 +126,37 @@ Of the seven cost lines in `02_sizing.xlsx`, the cost of error is the one that i
 
 **Owner:** Head of Support Operations, accountable for the decision; Legal, accountable for the wording of the receipt and of any automated refusal; both named before launch, and the eval-set carries a dedicated wrongful-refusal slice reviewed at every model change.
 	
+
+
+---
+
+## Session 4 — checkpoints, switch, eval data
+
+Written against the prototype at tag `eval-v0` (`04_architecture.md`) and its eval (`evals/report_v0.md`).
+
+### Human checkpoints ⊘
+
+| Where | Type | Who | What they see | Evidence it holds (eval-v0) |
+| --- | --- | --- | --- | --- |
+| Refund under €20 settled by the agent (L4) | sampling, after the fact | Head of Support Operations, weekly sample | the receipt: clause, carrier evidence, amount | 0 refunds ≥ €20 alone, 0 refunds without evidence |
+| Refund €20–100 prepared by the agent (L2) | approval, before any money moves | tier-1 support agent | the prepared receipt, Execute / Escalate | EV-010 (€20.00), EV-034 (€100.00) prepared, not settled |
+| Any refusal, at any amount (L2) | approval | tier-1 support agent | the receipt and the clause cited | 11/11 held-out refusals prepared, none sent alone |
+| Refund over €100 (L1) | the person decides | tier-1 support agent | the agent's recommendation only | EV-035 (€100.01) recommended |
+| Cases the agent stops on | abstention → person | tier-1 support agent | the receipt with the reason (`no_tracking_evidence`, `language_not_covered`, `amount_missing`, `evidence_contradicts_merchant`, …) | 5/5 held-out human-only cases stopped **except EV-050**, which was decided — the miss that fails eval-v0 |
+
+The checkpoint that failed is the abstention before the clause rules: the rules read fields and missed an exception written in prose. `spec.md` v2 adds a `policy_exception` stop; until it is built and re-evaluated, the agent stays a prototype.
+
+### The switch ⏻
+
+- **Owner:** the Head of Support Operations (§4). The agent's product owner may also trigger it on a failed eval replay; only the Head of Support Operations clears it.
+- **What it does:** every refund the agent would settle alone becomes `prepare` (L2) — the agent prepares, a person approves. It is a downgrade, not a shutdown, consistent with §6: switching the agent off entirely would return the queue to a three-day wait.
+- **Scope:** every merchant, every case. v0 has no per-merchant switch (`04_architecture.md` §9).
+- **When it must be pulled:** the triggers in §6 — refunded amount on agent-settled cases more than **€1,500** above the pre-agent baseline over a rolling 7 days (this figure supersedes the €2,000 in `03_product_brief.md` §8); any refund without tracking evidence; wrongful-refusal rate above the human baseline; a splitting signal; a model or policy version that has not passed the eval-set replay.
+- **Tested:** 17 November 2026 (`04_architecture.md` §6).
+
+### Where the eval data is stored, and who sees it
+
+- `evals/eval_set_v0.csv` — 50 synthetic cases, in this repository, readable by the team and the course staff. No real merchant, end-customer or carrier data; tracking numbers and receipt ids are invented.
+- `evals/results_v0.csv` — the receipts of the eval-v0 run, with two grader columns. Receipts never copy the merchant's free text (GDPR minimisation, `spec.md` §3).
+- **Frozen at tag `eval-v0`.** EV-021 to EV-050 have now been read while writing `spec.md` v2, so they are no longer held-out for v2: the next eval needs a fresh slice (the 200-case set, Session 5).
+- **In production** (not built): the eval-set would be drawn from real tickets, pseudonymised (merchant id hashed, end-customer names and addresses removed from tracking events), stored with the receipt audit log, access limited to Support Operations and the agent's product owner, and owned by the product owner (§4), who replays it at every model or policy change.

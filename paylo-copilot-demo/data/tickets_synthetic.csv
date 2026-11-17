@@ -1,0 +1,201 @@
+id,text,category,priority,plan,language
+T0179,We were charged after cancelling in June.,billing,normal,Enterprise,en
+T0169,Facture en double ce mois-ci.,billing,high,Enterprise,fr
+T0031,How do I export last month's payroll as CSV?,how_do_i,high,Scale,en
+T0149,Social contributions look double-counted on the March run.,payroll,high,Scale,en
+T0089,"The dashboard shows last year, how do I switch the period?",how_do_i,high,Starter,en
+T0163,We were charged after cancelling in June.,billing,low,Starter,en
+T0157,Social contributions look double-counted on the March run.,payroll,low,Scale,en
+T0155,Social contributions look double-counted on the March run. (screenshot attached),payroll,low,Enterprise,en
+T0024,"The dashboard shows last year, how do I switch teh period? (screenshot attached)",how_do_i,low,Scale,en
+T0186,"Our invoice shows two subscriptions, we only have one.",billing,normal,Enterprise,en
+T0021,How can I add a new admin user?,how_do_i,high,Enterprise,en
+T0003,How do I change the pay date for the whole company?,how_do_i,low,Starter,en
+T0023,How can I add a new admin user?,how_do_i,low,Scale,en
+T0195,Merci pour votre aide hier !,other,low,Enterprise,en
+T0153,Our payroll run is stuck at 'validating' since this morning.,payroll,normal,Scale,en
+T0039,Where do I find the release notes?,how_do_i,high,Scale,en
+T0080,How do I invite an accountant with read-only access?,how_do_i,normal,Scale,en
+T0064,"The dashboard shows last year, how do I switch the period?",how_do_i,normal,Enterprise,en
+T0130,Le montant net de Mme K. est faux sur avril.,payroll,low,Starter,en
+T0107,How can I add a new admin user?,how_do_i,high,Enterprise,en
+T0067,Comment exporter les bulletins de paie en PDF ?,how_do_i,normal,Starter,fr
+T0028,How do I export last month's payroll as CSV?,how_do_i,normal,Starter,en
+T0176,Facture en double ce mois-ci.,billing,high,Scale,fr
+T0065,"The dashboard shows last year, how do I switch the period? (screenshot attached)",how_do_i,high,Scale,en
+T0101,"The dashboard shows last year, how do I switch teh period?",how_do_i,normal,Scale,en
+T0168,We were charged after cancelling in June.,billing,high,Scale,en
+T0076,How do I change the pay date for the whole company?,how_do_i,normal,Scale,en
+T0041,Comment exporter les bulletins de paie en PDF ? (screenshot attached),how_do_i,high,Starter,fr
+T0083,Can I download payslips for one employee only?,how_do_i,normal,Enterprise,en
+T0053,How do I invite an accountant with read-only access?,how_do_i,low,Starter,en
+T0026,Where do I find the release notes? (screenshot attached),how_do_i,low,Starter,en
+T0105,How do I change the pay date for the whole company?,how_do_i,high,Enterprise,en
+T0038,Can I download payslips for one employee only?,how_do_i,high,Scale,en
+T0200,"Hello, is anyone there?",other,high,Scale,en
+T0142,Social contributions look double-counted on teh March run.,payroll,normal,Scale,en
+T0018,Where did the export button go after the update?,how_do_i,normal,Starter,en
+T0173,Can we move to annual billing?,billing,high,Scale,en
+T0110,How to bulk import employees from Excel? (screenshot attached),how_do_i,low,Enterprise,en
+T0098,How do I change the pay date for the whole company?,how_do_i,high,Enterprise,en
+T0030,How do I change the pay date for the whole company?,how_do_i,normal,Scale,en
+T0062,How do I change the pay date for the whole company?,how_do_i,high,Starter,en
+T0006,How do I set up SSO with Google?,how_do_i,high,Scale,en
+T0136,Social contributions look double-counted on the March run.,payroll,normal,Enterprise,en
+T0020,Comment exporter les bulletins de paie en PDF ? (screenshot attached),how_do_i,normal,Scale,fr
+T0075,Comment exporter les bulletins de paie en PDF ?,how_do_i,normal,Enterprise,fr
+T0054,"The dashboard shows last year, how do I switch the period?",how_do_i,normal,Scale,en
+T0104,Can I download payslips for one employee only?,how_do_i,normal,Starter,en
+T0036,How do I archive a leaver?,how_do_i,low,Scale,en
+T0151,Le montant net de Mme K. est faux sur avril.,payroll,normal,Scale,en
+T0156,Our payroll run is stuck at 'validating' since this morning. (screenshot attached),payroll,low,Enterprise,en
+T0185,We were charged after cancelling in June. (screenshot attached),billing,low,Scale,en
+T0188,"Our invoice shows two subscriptions, we only have one.",billing,normal,Scale,en
+T0191,"Your competitor does X, do you? (screenshot attached)",other,normal,Enterprise,en
+T0078,Where do I find the release notes?,how_do_i,normal,Scale,en
+T0087,How do I change teh pay date for the whole company? (screenshot attached),how_do_i,low,Scale,en
+T0025,How do I set up SSO with Google?,how_do_i,normal,Starter,en
+T0077,How do I change the pay date for the whole company?,how_do_i,high,Scale,en
+T0127,The net amount on three payslips is wrong and the transfer is tomorrow.,payroll,high,Enterprise,en
+T0120,The overtime rate applied is 1.25 instead of 1.5.,payroll,high,Starter,en
+T0109,"The dashboard shows last year, how do I switch the period?",how_do_i,low,Enterprise,en
+T0095,How can I add a new admin user?,how_do_i,low,Scale,en
+T0150,Le montant net de Mme K. est faux sur avril.,payroll,normal,Enterprise,en
+T0106,How do I export last month's payroll as CSV?,how_do_i,normal,Starter,en
+T0146,The net amount on three payslips is wrong and teh transfer is tomorrow.,payroll,high,Scale,en
+T0193,"Your competitor does X, do you?",other,high,Starter,en
+T0043,Comment exporter les bulletins de paie en PDF ?,how_do_i,normal,Scale,fr
+T0137,Social contributions look double-counted on the March run.,payroll,normal,Scale,en
+T0070,How do I set up SSO with Google?,how_do_i,low,Enterprise,en
+T0159,Our payroll run is stuck at 'validating' since this morning.,payroll,low,Starter,en
+T0182,Facture en double ce mois-ci.,billing,normal,Enterprise,fr
+T0111,Our payroll run is stuck at 'validating' since this morning. (screenshot attached),payroll,high,Starter,en
+T0180,We were charged after cancelling in June. (screenshot attached),billing,normal,Starter,en
+T0056,Can I download payslips for one employee only?,how_do_i,low,Enterprise,en
+T0073,"The dashboard shows last year, how do I switch the period? (screenshot attached)",how_do_i,low,Starter,en
+T0096,Comment exporter les bulletins de paie en PDF ?,how_do_i,low,Starter,fr
+T0134,The overtime rate applied is 1.25 instead of 1.5.,payroll,normal,Scale,en
+T0061,Where did the export button go after the update?,how_do_i,normal,Scale,en
+T0189,Facture en double ce mois-ci.,billing,normal,Starter,fr
+T0069,Where do I find the release notes?,how_do_i,normal,Enterprise,en
+T0059,How do I archive a leaver?,how_do_i,low,Enterprise,en
+T0128,The net amount on three payslips is wrong and the transfer is tomorrow.,payroll,high,Starter,en
+T0165,Facture en double ce mois-ci.,billing,low,Enterprise,fr
+T0114,Le montant net de Mme K. est faux sur avril.,payroll,normal,Starter,en
+T0022,Where did the export button go after the update?,how_do_i,normal,Scale,en
+T0014,Where did the export button go after the update?,how_do_i,high,Scale,en
+T0133,The overtime rate applied is 1.25 instead of 1.5.,payroll,low,Scale,en
+T0174,We were charged after cancelling in June.,billing,high,Enterprise,en
+T0055,How do I archive a leaver? (screenshot attached),how_do_i,low,Enterprise,en
+T0143,Our payroll run is stuck at 'validating' since this morning.,payroll,normal,Starter,en
+T0019,How do I export last month's payroll as CSV? (screenshot attached),how_do_i,normal,Enterprise,en
+T0011,How do I change the pay date for the whole company?,how_do_i,low,Starter,en
+T0115,Le montant net de Mme K. est faux sur avril.,payroll,high,Scale,en
+T0102,Comment exporter les bulletins de paie en PDF ?,how_do_i,high,Starter,fr
+T0047,"The dashboard shows last year, how do I switch the period?",how_do_i,normal,Enterprise,en
+T0103,Comment exporter les bulletins de paie en PDF ?,how_do_i,high,Enterprise,fr
+T0094,Where do I find the release notes?,how_do_i,normal,Scale,en
+T0144,The overtime rate applied is 1.25 instead of 1.5.,payroll,high,Enterprise,en
+T0007,How to bulk import employees from Excel?,how_do_i,normal,Starter,en
+T0032,How do I change the pay date for the whole company? (screenshot attached),how_do_i,normal,Scale,en
+T0199,"Your competitor does X, do you?",other,high,Enterprise,en
+T0027,How do I archive a leaver?,how_do_i,low,Enterprise,en
+T0175,"Our invoice shows two subscriptions, we only have one.",billing,low,Scale,en
+T0135,The overtime rate applied is 1.25 instead of 1.5.,payroll,low,Starter,en
+T0100,Comment exporter les bulletins de paie en PDF ?,how_do_i,low,Enterprise,fr
+T0108,How do I archive a leaver?,how_do_i,low,Scale,en
+T0198,Can we get a demo of the recruiting module?,other,low,Enterprise,en
+T0117,The net amount on three payslips is wrong and the transfer is tomorrow.,payroll,normal,Scale,en
+T0008,How to bulk import employees from Excel? (screenshot attached),how_do_i,normal,Enterprise,en
+T0013,Comment exporter les bulletins de paie en PDF ?,how_do_i,high,Starter,fr
+T0181,Facture en double ce mois-ci.,billing,low,Enterprise,fr
+T0033,How do I change the pay date for the whole company?,how_do_i,normal,Scale,en
+T0162,The VAT number on the invoice is wrong.,billing,low,Scale,en
+T0016,Comment exporter les bulletins de paie en PDF ?,how_do_i,low,Starter,fr
+T0178,We were charged after cancelling in June.,billing,normal,Scale,en
+T0082,Comment exporter les bulletins de paie en PDF ?,how_do_i,normal,Starter,fr
+T0085,How do I export last month's payroll as CSV?,how_do_i,high,Enterprise,en
+T0044,How do I change the pay date for the whole company?,how_do_i,low,Starter,en
+T0119,Le montant net de Mme K. est faux sur avril.,payroll,low,Starter,en
+T0164,"Our invoice shows two subscriptions, we only have one. (screenshot attached)",billing,low,Scale,en
+T0097,How can I add a new admin user?,how_do_i,low,Starter,en
+T0091,Where did the export button go after the update?,how_do_i,high,Enterprise,en
+T0140,Social contributions look double-counted on the March run.,payroll,normal,Enterprise,en
+T0125,The net amount on three payslips is wrong and teh transfer is tomorrow.,payroll,low,Scale,en
+T0052,Where do I find teh release notes?,how_do_i,normal,Starter,en
+T0074,Comment exporter les bulletins de paie en PDF ?,how_do_i,low,Enterprise,fr
+T0161,Facture en double ce mois-ci.,billing,low,Starter,fr
+T0141,The overtime rate applied is 1.25 instead of 1.5.,payroll,high,Scale,en
+T0183,The VAT number on the invoice is wrong.,billing,high,Scale,en
+T0187,Can we move to annual billing? (screenshot attached),billing,normal,Scale,en
+T0129,Our payroll run is stuck at 'validating' since this morning.,payroll,normal,Enterprise,en
+T0004,Can I download payslips for one employee only?,how_do_i,high,Scale,en
+T0057,How can I add a new admin user?,how_do_i,high,Starter,en
+T0049,How do I invite an accountant with read-only access?,how_do_i,low,Starter,en
+T0132,The net amount on three payslips is wrong and the transfer is tomorrow.,payroll,high,Enterprise,en
+T0050,How do I set up SSO with Google?,how_do_i,low,Scale,en
+T0002,Where did teh export button go after the update?,how_do_i,normal,Starter,en
+T0194,"Your competitor does X, do you?",other,low,Enterprise,en
+T0045,"The dashboard shows last year, how do I switch the period? (screenshot attached)",how_do_i,normal,Starter,en
+T0042,Can I download payslips for one employee only? (screenshot attached),how_do_i,low,Enterprise,en
+T0171,We were charged after cancelling in June.,billing,high,Scale,en
+T0167,Facture en double ce mois-ci. (screenshot attached),billing,low,Scale,fr
+T0122,The net amount on three payslips is wrong and the transfer is tomorrow.,payroll,normal,Enterprise,en
+T0058,How do I set up SSO with Google?,how_do_i,high,Starter,en
+T0063,Comment exporter les bulletins de paie en PDF ?,how_do_i,high,Scale,fr
+T0029,Where did the export button go after the update?,how_do_i,normal,Enterprise,en
+T0113,Our payroll run is stuck at 'validating' since this morning.,payroll,normal,Enterprise,en
+T0010,Where do I find the release notes?,how_do_i,normal,Starter,en
+T0017,How do I archive a leaver?,how_do_i,high,Starter,en
+T0015,Can I download payslips for one employee only?,how_do_i,high,Scale,en
+T0071,How do I export last month's payroll as CSV?,how_do_i,low,Scale,en
+T0158,The overtime rate applied is 1.25 instead of 1.5.,payroll,high,Scale,en
+T0148,Social contributions look double-counted on the March run. (screenshot attached),payroll,low,Starter,en
+T0116,Social contributions look double-counted on the March run.,payroll,low,Starter,en
+T0084,Where did teh export button go after the update?,how_do_i,normal,Starter,en
+T0081,Where do I find the release notes?,how_do_i,low,Scale,en
+T0197,"Hello, is anyone there?",other,high,Enterprise,en
+T0088,Where did teh export button go after the update? (screenshot attached),how_do_i,high,Scale,en
+T0060,Where did the export button go after the update?,how_do_i,normal,Enterprise,en
+T0001,How do I change the pay date for the whole company?,how_do_i,normal,Starter,en
+T0012,How do I export last month's payroll as CSV?,how_do_i,high,Enterprise,en
+T0034,How can I add a new admin user?,how_do_i,normal,Enterprise,en
+T0079,How do I invite an accountant with read-only access? (screenshot attached),how_do_i,low,Enterprise,en
+T0147,Le montant net de Mme K. est faux sur avril.,payroll,normal,Scale,en
+T0118,The overtime rate applied is 1.25 instead of 1.5.,payroll,normal,Scale,en
+T0005,Can I download payslips for one employee only?,how_do_i,high,Enterprise,en
+T0046,How to bulk import employees from Excel?,how_do_i,low,Enterprise,en
+T0138,Le montant net de Mme K. est faux sur avril.,payroll,low,Scale,en
+T0166,Can we move to annual billing?,billing,high,Enterprise,en
+T0048,How do I invite an accountant with read-only access? (screenshot attached),how_do_i,high,Starter,en
+T0177,Can we move to annual billing?,billing,normal,Scale,en
+T0152,Le montant net de Mme K. est faux sur avril.,payroll,high,Starter,en
+T0066,Comment exporter les bulletins de paie en PDF ?,how_do_i,high,Starter,fr
+T0112,The net amount on three payslips is wrong and the transfer is tomorrow. (screenshot attached),payroll,normal,Starter,en
+T0172,Can we move to annual billing?,billing,low,Enterprise,en
+T0009,How do I archive a leaver?,how_do_i,high,Starter,en
+T0131,Social contributions look double-counted on teh March run. (screenshot attached),payroll,low,Enterprise,en
+T0160,Our payroll run is stuck at 'validating' since this morning. (screenshot attached),payroll,normal,Enterprise,en
+T0090,Comment exporter les bulletins de paie en PDF ? (screenshot attached),how_do_i,high,Enterprise,fr
+T0123,Social contributions look double-counted on the March run.,payroll,low,Enterprise,en
+T0099,How can I add a new admin user?,how_do_i,high,Enterprise,en
+T0126,Our payroll run is stuck at 'validating' since this morning.,payroll,low,Enterprise,en
+T0035,Where did the export button go after the update?,how_do_i,high,Enterprise,en
+T0154,The net amount on three payslips is wrong and teh transfer is tomorrow.,payroll,low,Starter,en
+T0124,Our payroll run is stuck at 'validating' since this morning.,payroll,low,Starter,en
+T0170,"Our invoice shows two subscriptions, we only have one.",billing,high,Starter,en
+T0145,The net amount on three payslips is wrong and the transfer is tomorrow.,payroll,high,Enterprise,en
+T0184,Can we move to annual billing?,billing,low,Starter,en
+T0139,Social contributions look double-counted on the March run.,payroll,low,Starter,en
+T0068,"The dashboard shows last year, how do I switch the period?",how_do_i,low,Starter,en
+T0040,How do I set up SSO with Google?,how_do_i,low,Scale,en
+T0093,How to bulk import employees from Excel?,how_do_i,normal,Enterprise,en
+T0086,How to bulk import employees from Excel?,how_do_i,low,Enterprise,en
+T0037,How do I change the pay date for the whole company?,how_do_i,low,Scale,en
+T0051,How do I set up SSO with Google? (screenshot attached),how_do_i,high,Scale,en
+T0072,Where did teh export button go after the update?,how_do_i,normal,Enterprise,en
+T0192,"Your competitor does X, do you?",other,normal,Scale,en
+T0190,"Our invoice shows two subscriptions, we only have one.",billing,low,Starter,en
+T0121,Le montant net de Mme K. est faux sur avril. (screenshot attached),payroll,low,Enterprise,en
+T0092,How can I add a new admin user?,how_do_i,normal,Scale,en
+T0196,Can we get a demo of the recruiting module?,other,normal,Enterprise,en

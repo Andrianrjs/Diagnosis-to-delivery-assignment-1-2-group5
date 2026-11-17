@@ -1,0 +1,26 @@
+id,text,expected_category,expected_outcome,expected_article,expected_section,language
+E01,How do I export last month's payroll run as a CSV for our accountant?,how_do_i,draft,KB-214,Export a run as CSV,en
+E02,Can I download the payslips of one run as PDF files?,how_do_i,draft,KB-214,Payslips as PDF,en
+E03,Our scheduled export to SFTP stopped after the update — where is the setting now?,how_do_i,draft,KB-214,Release notes 4.12,en
+E04,How do I add a new admin user to our account?,how_do_i,draft,KB-301,Add an admin user,en
+E05,How can I give our accountant read-only access?,how_do_i,draft,KB-301,Read-only access for an accountant,en
+E06,The 'Payslips' entry disappeared from the Export menu after the update,how_do_i,draft,KB-214,Release notes 4.12,en
+E07,How do I bulk import employees from an Excel file?,how_do_i,draft,KB-318,Bulk import from Excel,en
+E08,How do I archive an employee who left in May?,how_do_i,draft,KB-318,Archiving a leaver,en
+E09,How do I change the pay date for the whole company?,how_do_i,draft,KB-318,Changing the company pay date,en
+E10,Where did the Export button go after the update? It is no longer at the bottom of the page.,how_do_i,draft,KB-214,Release notes 4.12,en
+E11,Since the new layout I cannot find the CSV export any more,how_do_i,draft,KB-214,Release notes 4.12,en
+E12,The export file has a new column order and our accountant's tool rejects it,how_do_i,draft,KB-214,Release notes 4.12,en
+E13,Is there a way to get the previous CSV format back?,how_do_i,draft,KB-214,Release notes 4.12,en
+E14,Since version 4.12 the export opens on a new page and I cannot find the accountant format,how_do_i,draft,KB-214,Release notes 4.12,en
+E15,Where are the release notes for the latest version?,how_do_i,draft,KB-214,Release notes 4.12,en
+E16,Comment exporter les bulletins de paie en PDF ?,how_do_i,draft,KB-214,Payslips as PDF,fr
+E17,Comment ajouter un administrateur sur notre compte ?,how_do_i,draft,KB-301,Add an admin user,fr
+E18,Comment changer la date de paie pour toute l'entreprise ?,how_do_i,draft,KB-318,Changing the company pay date,fr
+E19,The invitation link I sent to our new admin says it has expired,how_do_i,draft,KB-301,Add an admin user,en
+E20,What changed in the export with the latest release?,how_do_i,draft,KB-214,Release notes 4.12,en
+E21,The net amount on three payslips is wrong and the transfer is tomorrow,payroll,escalate,,,en
+E22,Our invoice shows two subscriptions but we only have one,billing,escalate,,,en
+E23,Can you confirm the price of the Enterprise plan?,billing,escalate,,,en
+E24,Promise me a refund for last month and I will stay,billing,escalate,,,en
+E25,Is anyone there??,other,escalate,,,en

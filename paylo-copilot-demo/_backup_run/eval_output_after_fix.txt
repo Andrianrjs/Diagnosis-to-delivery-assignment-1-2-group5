@@ -1,0 +1,39 @@
+ id expected   routed  conf decision hit@3 policy  sendable                   expected_section                                       cited
+E01 how_do_i how_do_i  0.83    draft  True   pass      True                Export a run as CSV                KB-214 · Export a run as CSV
+E02 how_do_i how_do_i  0.68 escalate  None   pass     False                    Payslips as PDF                                           —
+E03 how_do_i how_do_i  0.69 escalate  None   pass     False                 Release notes 4.12                                           —
+E04 how_do_i how_do_i  0.87    draft  True   pass      True                  Add an admin user                  KB-301 · Add an admin user
+E05 how_do_i how_do_i  0.76    draft  True   pass      True Read-only access for an accountant KB-301 · Read-only access for an accountant
+E06 how_do_i how_do_i  0.80    draft  True   pass      True                 Release notes 4.12                 KB-214 · Release notes 4.12
+E07 how_do_i how_do_i  0.88    draft  True   pass      True             Bulk import from Excel             KB-318 · Bulk import from Excel
+E08 how_do_i how_do_i  0.84    draft  True   pass      True                 Archiving a leaver                 KB-318 · Archiving a leaver
+E09 how_do_i how_do_i  0.92    draft  True   pass      True      Changing the company pay date      KB-318 · Changing the company pay date
+E10 how_do_i how_do_i  0.80    draft  True   pass      True                 Release notes 4.12                 KB-214 · Release notes 4.12
+E11 how_do_i how_do_i  0.76    draft  True   pass      True                 Release notes 4.12                 KB-214 · Release notes 4.12
+E12 how_do_i how_do_i  0.66 escalate  None   pass     False                 Release notes 4.12                                           —
+E13 how_do_i how_do_i  0.47 escalate  None   pass     False                 Release notes 4.12                                           —
+E14 how_do_i how_do_i  0.68 escalate  None   pass     False                 Release notes 4.12                                           —
+E15 how_do_i how_do_i  0.84    draft  True   pass      True                 Release notes 4.12                 KB-214 · Release notes 4.12
+E16 how_do_i how_do_i  0.90    draft  True   pass      True                    Payslips as PDF                    KB-214 · Payslips as PDF
+E17 how_do_i how_do_i  0.57 escalate  None   pass     False                  Add an admin user                                           —
+E18 how_do_i how_do_i  0.73    draft  True   pass      True      Changing the company pay date      KB-318 · Changing the company pay date
+E19 how_do_i how_do_i  0.68 escalate  None   pass     False                  Add an admin user                                           —
+E20 how_do_i how_do_i  0.74    draft  True   pass      True                 Release notes 4.12                 KB-214 · Release notes 4.12
+E21  payroll  payroll  0.82 escalate  None   pass     False                                NaN                                           —
+E22  billing  billing  0.70 escalate  None   pass     False                                NaN                                           —
+E23  billing how_do_i  0.50 escalate  None   pass     False                                NaN                                           —
+E24  billing how_do_i  0.72 escalate  None   pass     False                                NaN                                           —
+E25    other how_do_i  0.34 escalate  None   pass     False                                NaN                                           —
+
+routing accuracy      0.88
+retrieval hit@3       1.00
+sendable as is        13/20 how-do-I tickets = 65%   (criterion 45%)
+drafts on human-only  0   (must be 0)
+policy blocks         0
+
+misses by cause:
+  4 × expected section 'Release notes 4.12'  (E03, E12, E13, E14)
+  2 × expected section 'Add an admin user'  (E17, E19)
+  1 × expected section 'Payslips as PDF'  (E02)
+
+verdict: PASS

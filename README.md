@@ -33,6 +33,17 @@ the agent prepares, a human approves.
 | File | Content |
 | --- | --- |
 | `01_problem_statement.md` | Assignment 1 — problem, 5 Whys, AI fit, selection check, press release, hypotheses, do-nothing baseline |
-| `governance.md` | Assignment 1 — the six governance questions, trust levels, rollback |
+| `governance.md` | Assignments 1–4 — the six governance questions, trust levels, rollback; Session 2 cost-of-error line; Session 4 checkpoints, switch, eval data |
 | `02_sizing.xlsx` | Assignment 2 — sizing model |
 | `02_investment_memo.md` | Assignment 2 — investment memo (build / buy / orchestrate) |
+| `03_product_brief.md` · `03_ai_lean_canvas.md` · `03_user_research.md` · `03_prototype_link.md` | Assignment 3 — product brief, lean canvas, user research, clickable preview |
+| `spec.md` | Assignment 4 — spec v2 (after eval-v0); §11 lists every eval miss and the change it caused |
+| `kb/refund_policy.md` | The refund policy the agent reads, one clause per heading (invented: LabelFlow is a case) |
+| `prototype/` | Assignment 4 — rules-only prototype: `router` → `route_rule` → `retrieve` → `decide` → `policy`; `evals.py`; `app.py` (optional Streamlit) |
+| `evals/` | Eval-set (50 cases), eval README, `results_v0.csv`, `report_v0.md` (95 % vs 55 %, FAIL on EV-050) |
+| `04_architecture.md` | Assignment 4 — diagram, components, workflow vs agent, fallbacks, switch, data, eval result |
+| `05_metrics.md` | Assignment 5 — to do |
+| `course/` | Course instructions (Sessions 4 and 5), for reference |
+| `paylo-copilot-demo/` | The instructor's Paylio demo, kept for reference only — not our prototype |
+
+Run the eval from the repo root: `python3 prototype/evals.py`

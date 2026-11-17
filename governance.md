@@ -142,8 +142,7 @@ Written against the prototype at tag `eval-v0` (`04_architecture.md`) and its ev
 | Refund €20–100 prepared by the agent (L2) | approval, before any money moves | tier-1 support agent | the prepared receipt, Execute / Escalate | EV-010 (€20.00), EV-034 (€100.00) prepared, not settled |
 | Any refusal, at any amount (L2) | approval | tier-1 support agent | the receipt and the clause cited | 11/11 held-out refusals prepared, none sent alone |
 | Refund over €100 (L1) | the person decides | tier-1 support agent | the agent's recommendation only | EV-035 (€100.01) recommended |
-| Cases the agent stops on | abstention → person | tier-1 support agent | the receipt with the reason (`no_tracking_evidence`, `language_not_covered`, `amount_missing`, `evidence_contradicts_merchant`, …) | 5/5 held-out human-only cases stopped **except EV-050**, which was decided — the miss that fails eval-v0 |
-
+| Cases the agent stops on | abstention → person | tier-1 support agent | the receipt with the reason (`no_tracking_evidence`, `language_not_covered`, `amount_missing`, `evidence_contradicts_merchant`, …) | 5/6 held-out human-only cases stopped; **EV-050** was decided — the miss that fails eval-v0
 The checkpoint that failed is the abstention before the clause rules: the rules read fields and missed an exception written in prose. `spec.md` v2 adds a `policy_exception` stop; until it is built and re-evaluated, the agent stays a prototype.
 
 ### The switch ⏻

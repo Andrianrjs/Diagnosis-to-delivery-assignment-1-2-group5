@@ -142,7 +142,8 @@ Written against the prototype at tag `eval-v0` (`04_architecture.md`) and its ev
 | Refund €20–100 prepared by the agent (L2) | approval, before any money moves | tier-1 support agent | the prepared receipt, Execute / Escalate | EV-010 (€20.00), EV-034 (€100.00) prepared, not settled |
 | Any refusal, at any amount (L2) | approval | tier-1 support agent | the receipt and the clause cited | 11/11 held-out refusals prepared, none sent alone |
 | Refund over €100 (L1) | the person decides | tier-1 support agent | the agent's recommendation only | EV-035 (€100.01) recommended |
-| Cases the agent stops on | abstention → person | tier-1 support agent | the receipt with the reason (`no_tracking_evidence`, `language_not_covered`, `amount_missing`, `evidence_contradicts_merchant`, …) | 5/6 held-out human-only cases stopped; **EV-050** was decided — the miss that fails eval-v0
+| Cases the agent stops on | abstention → person | tier-1 support agent | the receipt with the reason (`no_tracking_evidence`, `language_not_covered`, `amount_missing`, `evidence_contradicts_merchant`, …) | 5/6 held-out human-only cases stopped; **EV-050** was decided — the miss that fails eval-v0 |
+
 The checkpoint that failed is the abstention before the clause rules: the rules read fields and missed an exception written in prose. `spec.md` v2 adds a `policy_exception` stop; until it is built and re-evaluated, the agent stays a prototype.
 
 ### The switch ⏻
@@ -159,3 +160,15 @@ The checkpoint that failed is the abstention before the clause rules: the rules 
 - `evals/results_v0.csv` — the receipts of the eval-v0 run, with two grader columns. Receipts never copy the merchant's free text (GDPR minimisation, `spec.md` §3).
 - **Frozen at tag `eval-v0`.** EV-021 to EV-050 have now been read while writing `spec.md` v2, so they are no longer held-out for v2: the next eval needs a fresh slice (the 200-case set, Session 5).
 - **In production** (not built): the eval-set would be drawn from real tickets, pseudonymised (merchant id hashed, end-customer names and addresses removed from tracking events), stored with the receipt audit log, access limited to Support Operations and the agent's product owner, and owned by the product owner (§4), who replays it at every model or policy change.
+
+
+---
+
+## Session 5 — counter-metrics, segments, harm threshold
+
+Written against `05_metrics.md` §3.
+
+- **Counter-metrics:** refund leakage (€ refunded on agent-settled cases minus the pre-agent baseline, rolling 7 days, band ≤ €1.5k, owner Finance); wrongful refusals (refusals overturned after a dispute / refusals sent) and the 90-day churn of merchants who received a refusal (owner Head of Support Operations, with Legal).
+- **Segments reported:** language (FR · EN · other), plan (standard · high-volume · enterprise), amount band (< €20 · €20–100 · > €100), carrier status. Fairness metric: selection-rate parity by language and plan, read with equal error rates. Known gap, chosen: requests outside FR and EN are never decided, and are protected by the "person reached" guardrail.
+- **Harm threshold that stops the rollout:** "If, on any language or plan segment, the wrongful-refusal rate exceeds that segment's pre-agent human rate, or the abstention guardrail records a decided human-only case, over two consecutive weeks, the agent drops to L2 (prepare only) on that segment until the gap is explained. Owner: Head of Support Operations; reviewed with Legal monthly."
+- **Prerequisite:** v0 has no per-segment switch (`04_architecture.md` §6); the threshold above needs one in `spec.md`.

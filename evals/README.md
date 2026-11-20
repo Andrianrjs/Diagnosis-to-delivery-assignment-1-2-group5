@@ -35,7 +35,7 @@ The golden set is EV-021 to EV-050, the eval-v0 held-out cases. It never changes
 |---|---|---|
 | Human–human (A vs B, same 30 rows) | *to fill* | |
 | Human–judge (judge vs the rows where A and B agree) | *to fill* | |
-| Judge model | *to fill* (name and version) | |
+| Judge model | Claude Opus 5.5 (Anthropic), run on 20 November 2026 as a separate agent that saw only `judge_inputs_golden30.txt` (no labels, no repo, no conversation) | 20/11/2026 | |
 
 **What the disagreements were, and what we changed:** *to fill after the run, one or two sentences.*
 

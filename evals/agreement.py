@@ -9,6 +9,13 @@ SHEET = Path(__file__).resolve().parent / "grading_golden30.csv"
 VERDICTS = {"EXECUTE", "EDIT", "FAIL"}
 
 rows = list(csv.DictReader(open(SHEET, encoding="utf-8")))
+A_SHEET = Path(__file__).resolve().parent / "grading_A.csv"
+if A_SHEET.exists():
+    a = {r["case_id"]: r for r in csv.DictReader(open(A_SHEET, encoding="utf-8"))}
+    for r in rows:
+        if r["case_id"] in a:
+            r["grader_A_verdict"] = a[r["case_id"]]["grader_A_verdict"]
+            r["grader_A_note"] = a[r["case_id"]].get("grader_A_note", "")
 for col in ("grader_A_verdict", "grader_B_verdict", "judge_verdict"):
     bad = [r["case_id"] for r in rows if r[col].strip().upper() not in VERDICTS]
     if bad:

@@ -1,0 +1,31 @@
+case_id,grader_A_verdict,grader_A_note
+EV-021,EXECUTE,
+EV-022,EXECUTE,
+EV-023,EXECUTE,
+EV-024,EXECUTE,
+EV-025,EXECUTE,
+EV-026,EXECUTE,
+EV-027,EXECUTE,
+EV-028,EXECUTE,
+EV-029,EXECUTE,
+EV-030,EXECUTE,
+EV-031,EDIT,right refusal but POL-4.5 cited instead of POL-5.3 so the merchant is not told to ask again from day 21
+EV-032,EXECUTE,
+EV-033,EXECUTE,
+EV-034,EXECUTE,
+EV-035,EXECUTE,
+EV-036,EXECUTE,
+EV-037,EXECUTE,
+EV-038,EXECUTE,
+EV-039,EXECUTE,
+EV-040,EXECUTE,
+EV-041,EXECUTE,
+EV-042,EXECUTE,
+EV-043,EXECUTE,
+EV-044,EXECUTE,
+EV-045,EXECUTE,
+EV-046,EDIT,right refusal under POL-6.3 but the receipt does not name the earlier receipt RCP-20261021-0912 as the clause requires
+EV-047,EXECUTE,refusal on the carrier evidence as spec.md section 4 says; policy v1 may say hand over when the record contradicts the merchant: to settle
+EV-048,EXECUTE,
+EV-049,EXECUTE,
+EV-050,FAIL,carrier stopped operating is not covered by any clause so a person should decide; the agent refused under POL-4.2

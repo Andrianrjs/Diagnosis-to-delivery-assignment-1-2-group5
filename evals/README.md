@@ -33,11 +33,12 @@ The golden set is EV-021 to EV-050, the eval-v0 held-out cases. It never changes
 
 | | Value | Date |
 |---|---|---|
-| Human–human (A vs B, same 30 rows) | *to fill* | |
-| Human–judge (judge vs the rows where A and B agree) | *to fill* | |
+| A vs B (same 30 rows) | 29/30 = 97% | 21/11/2026 |
+| Judge vs the rows where A and B agree | 28/29 = 97% | 21/11/2026 |
 | Judge model | Claude Opus 5.5 (Anthropic), run on 20 November 2026 as a separate agent that saw only `judge_inputs_golden30.txt` (no labels, no repo, no conversation) | 20/11/2026 | |
 
-**What the disagreements were, and what we changed:** *to fill after the run, one or two sentences.*
+**What the disagreements were, and what we changed:** 
+**What the disagreements were, and what we changed:** two rows. EV-046 (A and judge EDIT, B EXECUTE): the refusal under POL-6.3 is right but the receipt does not name the earlier refund receipt, which the clause requires; we added to the rubric that a receipt missing an element the cited clause requires is EDIT, and the receipt fix goes to `spec.md` v3. EV-047 (A and B EXECUTE, judge FAIL): the judge followed `kb/refund_policy.md` v1, which hands the case to a person when the merchant contradicts the carrier record, while the graders followed `spec.md` §4, which decides on the evidence. The judge was not wrong, the policy and the spec disagreed: we aligned the policy on the spec (a DELIVERED scan outweighs the merchant's claim, refused under POL-4.5 with the scan cited) and re-ran the judge on EV-047. The 97% is an upper bound: both graders wrote the golden labels on 17 November and both columns were graded with AI support.
 
 ## Known biases, stated
 

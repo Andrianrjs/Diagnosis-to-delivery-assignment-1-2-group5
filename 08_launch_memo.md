@@ -4,7 +4,7 @@
 
 ## 1 · Decision
 
-**Conditional go — to step 0 only: shadow mode on sub-€20 refund requests from FR and EN merchants, 2 weeks, orchestrated with a vendor, no refund executed by the agent**, from 7 December 2026. The next decision is read on 21 December 2026 by the Head of Support Operations and Finance. Step 1 opens only if (a) `spec.md` v2 passes the fresh slice of eval v1 (EV-051 to EV-100) with zero hard-invariant breaches, and (b) the three-month refund-amount export shows in-scope volume heading to ~33,000 deflected tickets a year (`02_investment_memo.md`). Without (b), the answer stays NO-GO: a better agent does not rescue the case, scope does.
+**Conditional go — to step 0 only: shadow mode on sub-€20 refund requests from FR and EN merchants, 2 weeks, orchestrated with a vendor, no refund executed by the agent**, from 7 December 2026. The next decision is read on 21 December 2026 by the Head of Support Operations and Finance. Step 1 opens only if (a) `spec.md` v3 passes the fresh slice of eval v1 (EV-051 to EV-100) with zero hard-invariant breaches, and (b) the three-month refund-amount export shows in-scope volume heading to ~33,000 deflected tickets a year (`02_investment_memo.md`). Without (b), the answer stays NO-GO: a better agent does not rescue the case, scope does.
 
 **Budget we ask for:** €35k a year, the evaluation line of the fixed costs (`Inputs!D51`), not the €164k full fixed base (`Decision!D14`). It pays for the eval v1 runs, the graders' time on the golden 30, the shadow-mode comparison and the weekly L4 sample. The rest of the fixed base is asked for at the step-2 gate, not before.
 
@@ -43,5 +43,5 @@ Trigger: refunded € over 7 days more than €1.5k above baseline, any hard inv
 ## 6 · What we do not know yet
 
 - **The share of refund requests under €20** is a guess (65 %, `Inputs!D14`), and it moves the whole case — next experiment: the three-month refund-amount export, before step 0 ends.
-- **Whether spec v2 generalises**: EV-051 to EV-100 have never been run, and the policy and the spec still disagree on a merchant who contradicts the carrier record (EV-047) — next experiment: eval v1 on the fresh slice, after aligning the policy, before step 1.
+- **Whether spec v3 generalises**: EV-051 to EV-100 have never been run; the policy and the spec are now aligned on EV-047 (`2026-11-v2`) but the judge has not been re-run on it — next experiment: build v3, run eval v1 on the fresh slice and re-run the judge on EV-046 and EV-047, before step 1.
 - **The pre-agent wrongful-refusal rate per segment**, which the harm threshold compares against, and the €1.5k trigger, which is a guess (`governance.md` §6) — how we will: measure both from the dispute log and the refund export of the last three months, before step 1.

@@ -104,4 +104,4 @@ The 55 % is the Base deflection assumption on category 1 in `02_sizing.xlsx` (In
 
 ## 10. What they could not decide
 
-> **PENDING for the same reason.** The questions we already know users cannot settle for us, and who settles them instead: the €20 threshold (Finance and Legal, from the three-month refund-amount export), the EU AI Act risk tier (Legal), and the retention period for decision receipts (Finance and Legal). Users can tell us whether the receipt is readable; they cannot tell us where the money line sits.
+> **Not run either, so no user settled these.** The questions we already know users cannot settle for us, and who settles them instead: the €20 threshold (Finance and Legal, from the three-month refund-amount export), the EU AI Act risk tier (Legal), and the retention period for decision receipts (Finance and Legal). Users can tell us whether the receipt is readable; they cannot tell us where the money line sits.

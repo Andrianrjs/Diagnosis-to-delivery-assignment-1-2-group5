@@ -158,7 +158,7 @@ The checkpoint that failed is the abstention before the clause rules: the rules 
 
 - `evals/eval_set_v0.csv` — 50 synthetic cases, in this repository, readable by the team and the course staff. No real merchant, end-customer or carrier data; tracking numbers and receipt ids are invented.
 - `evals/results_v0.csv` — the receipts of the eval-v0 run, with two grader columns. Receipts never copy the merchant's free text (GDPR minimisation, `spec.md` §3).
-- **Frozen at tag `eval-v0`.** EV-021 to EV-050 have now been read while writing `spec.md` v2, so they are no longer held-out for v2: the next eval needs a fresh slice (the 200-case set, Session 5).
+- **Frozen at tag `eval-v0`.** EV-021 to EV-050 have now been read while writing `spec.md` v2, so they are no longer held-out for v2: the next eval needs a fresh slice (EV-051 to EV-100 of evals/eval_set_v1.csv).
 - **In production** (not built): the eval-set would be drawn from real tickets, pseudonymised (merchant id hashed, end-customer names and addresses removed from tracking events), stored with the receipt audit log, access limited to Support Operations and the agent's product owner, and owned by the product owner (§4), who replays it at every model or policy change.
 
 

@@ -33,18 +33,19 @@ the agent prepares, a human approves.
 | File | Content |
 | --- | --- |
 | `01_problem_statement.md` | Assignment 1 — problem, 5 Whys, AI fit, selection check, press release, hypotheses, do-nothing baseline |
-|`governance.md` | Assignments 1–7 — the six governance questions, trust levels, rollback; Session 2 cost-of-error line; Session 4 checkpoints, switch, eval data; Session 5 harm threshold; Sessions 6-7 experiment signature, switch owner, trace retention |
+|`governance.md` | Assignments 1–8 — the six governance questions, trust levels, rollback; Session 2 cost-of-error line; Session 4 checkpoints, switch, eval data; Session 5 harm threshold; Sessions 6-7 experiment signature, switch owner, trace retention | Session 8 launch signature |
 | `02_sizing.xlsx` | Assignment 2 — sizing model |
 | `02_investment_memo.md` | Assignment 2 — investment memo (build / buy / orchestrate) |
 | `03_product_brief.md` · `03_ai_lean_canvas.md` · `03_user_research.md` · `03_prototype_link.md` | Assignment 3 — product brief, lean canvas, user research, clickable preview |
-| `spec.md` | Assignment 4 — spec v2 (after eval-v0); §11 lists every eval miss and the change it caused |
+| `spec.md` | Assignment 4 — spec v3 (after eval-v0 and the golden-30 grading); §11–§12 list every miss and disagreement and the change it caused |
 | `kb/refund_policy.md` | The refund policy the agent reads, one clause per heading (invented: LabelFlow is a case) |
 | `prototype/` | Assignment 4 — rules-only prototype: `router` → `route_rule` → `retrieve` → `decide` → `policy`; `evals.py`; `app.py` (optional Streamlit) |
 | `evals/` | Eval-set v0 (50 cases) and v1 (100 cases), grading guideline, judge prompt, golden-30 grading sheet, `results_v0.csv`, `report_v0.md` (95 % vs 55 %, FAIL on EV-050) |
 | `04_architecture.md` | Assignment 4 — diagram, components, workflow vs agent, fallbacks, switch, data, eval result |
 | `05_metrics.md` | Assignment 5 — metrics stack, stop criterion, hierarchy by segment, three business metrics, evaluation plan |
-| course/ | Course instructions (Sessions 4, 5 and 6-7), for reference |
+| course/ | Course instructions (Sessions 4 to 8), for reference |
 | `paylo-copilot-demo/` | The instructor's Paylio demo, kept for reference only — not our prototype |
 | 06_07_experiments_operations.md | Assignment 6-7 — hypotheses, unit, design, decision rule, four-layer monitoring, trace, incidents, rollback, owners |
+| 08_launch_memo.md | Assignment 8 — launch memo: conditional go to shadow mode, evidence, rollout steps, rollback, owners, unknowns |
 
 Run the eval from the repo root: `python3 prototype/evals.py`

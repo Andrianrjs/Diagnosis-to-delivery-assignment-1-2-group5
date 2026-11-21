@@ -33,7 +33,7 @@ the agent prepares, a human approves.
 | File | Content |
 | --- | --- |
 | `01_problem_statement.md` | Assignment 1 — problem, 5 Whys, AI fit, selection check, press release, hypotheses, do-nothing baseline |
-| `governance.md` | Assignments 1–4 — the six governance questions, trust levels, rollback; Session 2 cost-of-error line; Session 4 checkpoints, switch, eval data |
+|`governance.md` | Assignments 1–7 — the six governance questions, trust levels, rollback; Session 2 cost-of-error line; Session 4 checkpoints, switch, eval data; Session 5 harm threshold; Sessions 6-7 experiment signature, switch owner, trace retention |
 | `02_sizing.xlsx` | Assignment 2 — sizing model |
 | `02_investment_memo.md` | Assignment 2 — investment memo (build / buy / orchestrate) |
 | `03_product_brief.md` · `03_ai_lean_canvas.md` · `03_user_research.md` · `03_prototype_link.md` | Assignment 3 — product brief, lean canvas, user research, clickable preview |

@@ -1,6 +1,6 @@
 # LabelFlow · Shipping-label refund policy
 
-Version 2026-11-v1 · 20 November 2026 · invented for the course: LabelFlow is a case, not a client.
+Version 2026-11-v2 · 26 November 2026 (v1: 20 November 2026) · invented for the course: LabelFlow is a case, not a client.
 First written text of the policy. The eval-v0 receipts cite policy version `2026-11-v0`, which had no text in the repository.
 
 Only the headings that start with `POL-` are clauses; the prototype loads them one per heading (`prototype/retrieve.py`). The other sections say who decides and how clauses combine.
@@ -11,7 +11,7 @@ This policy covers refunds of shipping labels bought on LabelFlow. It does not c
 
 ## Cases a person always decides
 
-A support agent decides, and the refund agent hands the case over with its reason, when: the carrier record is missing, unreadable or lacks the elapsed days a clause needs; the record contradicts the merchant (delivered, but the merchant says it never arrived); the merchant describes a situation no clause covers (carrier stopped operating in the region, carrier bankruptcy, strike, natural disaster, customs seizure); the request is written in a language other than French or English; the amount is missing; or two clauses would each refund the same request.
+A support agent decides, and the refund agent hands the case over with its reason, when: the carrier record is missing, unreadable or lacks the elapsed days a clause needs; the record contradicts the merchant on delivery (delivered, but the merchant says it never arrived) — a merchant who says the label was never used while the record shows a scan is not a dispute and is decided under POL-4.5 ; the merchant describes a situation no clause covers (carrier stopped operating in the region, carrier bankruptcy, strike, natural disaster, customs seizure); the request is written in a language other than French or English; the amount is missing; or two clauses would each refund the same request.
 
 ## POL-4.2-unused-label · Unused label
 
@@ -20,6 +20,7 @@ A label that the carrier has never scanned is refunded in full once 14 days have
 ## POL-4.5-consumed-label · Consumed label
 
 A label that the carrier scanned and delivered has been used: the shipping service was provided and the label is not refunded. Evidence: carrier status DELIVERED.
+The decision follows the carrier record, whatever the merchant says about the label's use.
 
 ## POL-4.6-return-to-sender · Return to sender
 

@@ -1,4 +1,4 @@
-# spec.md — LabelFlow refund agent, v2 (after eval-v0)
+# spec.md — LabelFlow refund agent, v3 (after eval-v0 and the golden-30 grading)
 > Written from `03_product_brief.md` v2 (Session 3). This is what the coding agent reads. Every section is a decision; nothing here is "nice to have".
 
 ## 1. Problem (one paragraph)
@@ -9,11 +9,12 @@ LabelFlow's tier-1 support agents spend ~9 minutes per shipping-label refund req
 
 1. **Route** — rung 1. Detect the language (`fr | en | other`) from a word list. `other` → `unknown`, reason `language_not_covered`. Parse `amount_eur` as a positive number; missing or unparseable → `unknown`, reason `amount_missing`.
 2. **Routing rule** — rung 1. The evidence gate. `tracking_number` must match `LF-` + 8 digits and the carrier record must be readable; otherwise `unknown`, reason `no_tracking_evidence`. This runs before any decision: no evidence, no decision.
-3. **Retrieve** — rung 1. Read the carrier record for the tracking number (in v0 the `evidence` column of the eval-set stands in for the carrier API) into `{status: NO_SCAN|IN_TRANSIT|DELIVERED|RETURNED_TO_SENDER, days, duplicate_charge, prior_refund, damage_claim, disputed}`. Load the clauses from `kb/refund_policy.md` (one clause per `## ` heading).
+3. **Retrieve** — rung 1. Read the carrier record for the tracking number (in v0 the `evidence` column of the eval-set stands in for the carrier API) into `{status: NO_SCAN|IN_TRANSIT|DELIVERED|RETURNED_TO_SENDER, days, duplicate_charge, prior_refund, prior_receipt_id, damage_claim, disputed}`. Load the clauses from `kb/refund_policy.md` (one clause per `## ` heading).
 4. **Decide** — rung 1, rules in this order:
    - **[v2 · EV-050]** the merchant's text describes a situation no clause covers (carrier stopped operating / service withdrawn, carrier bankruptcy, strike, natural disaster, customs seizure; FR and EN) → `unknown`, reason `policy_exception`. Runs first, before any clause. v2: keyword list; next: rung-3 classifier (see `04_architecture.md` §9)
-   - prior receipt already refunded → refuse `POL-6.3-already-refunded`
+   - prior receipt already refunded → refuse `POL-6.3-already-refunded`. **[v3 · EV-046]** the receipt carries `prior_receipt_id`, as the clause requires; a prior refund on the record without its receipt id → `unknown`, reason `incomplete_evidence`
    - `DELIVERED` and (record says the merchant disputes, or the text says "never received" / "not received" / "jamais reçu" / "pas reçu") → `unknown`, reason `evidence_contradicts_merchant`
+   - **[v3 · EV-047]** `DELIVERED` and the merchant says the label was unused or never used (not that the parcel never arrived) → not a delivery dispute: decided on the record by the `DELIVERED` rule below (refuse `POL-4.5-consumed-label`, the receipt cites the scan)
    - **[v2 · EV-018]** `NO_SCAN` or `IN_TRANSIT` and the carrier record gives no elapsed days → `unknown`, reason `incomplete_evidence`. A clause that applies to the status but cannot be evaluated is never skipped; days are never read from the merchant's text
    - duplicate charge → refund candidate `POL-6.1-duplicate-charge`
    - `NO_SCAN`: days ≥ 14 → refund candidate `POL-4.2-unused-label`; days < 14 → refuse `POL-4.2-unused-label`
@@ -29,7 +30,7 @@ LabelFlow's tier-1 support agents spend ~9 minutes per shipping-label refund req
 ## 3. Contracts
 
 - Input: `{case_id, merchant_id, input_text, amount_eur, tracking_number, evidence}`.
-- Output (the receipt): `{case_id, action: refund|prepare|recommend|refuse|unknown, trust_level: L4|L2|L1|person, clause_id, clause_text, evidence, amount_eur, reason, policy: pass|block, model_version, policy_version, created_at}`.
+- Output (the receipt): `{case_id, action: refund|prepare|recommend|refuse|unknown, trust_level: L4|L2|L1|person, clause_id, clause_text, prior_receipt_id, evidence, amount_eur, reason, policy: pass|block, model_version, policy_version, created_at}`.
 - The merchant's free text is never copied into the receipt (GDPR minimisation).
 
 ## 4. Edge cases
@@ -43,6 +44,8 @@ LabelFlow's tier-1 support agents spend ~9 minutes per shipping-label refund req
 - **[v2 · EV-050]** A merchant describing an exceptional situation in prose is never decided by the rules, even if the fields alone would point to a clause.
 - **[v2 · EV-018]** A carrier record without elapsed days for a time-based status is incomplete evidence: escalate, do not fall back on the clauses that remain.
 - **[v2 · EV-031]** An in-transit parcel before day 21 is "not yet lost" (POL-5.3), not "consumed" (POL-4.5): the clause cited must tell the merchant when to come back.
+- **[v3 · EV-046]** A refusal under POL-6.3 always names the earlier receipt; without it the merchant cannot check the claim.
+- **[v3 · EV-047]** Only "the parcel never arrived" against a DELIVERED scan is a dispute for a person. "The label was never used" against a scan is decided on the record.
 
 ## 5. Fallbacks
 
@@ -99,4 +102,15 @@ Run `eval-v0` (17 Nov 2026, `evals/report_v0.md`): held-out 19/20 = 95 % executa
 | Right action, wrong clause | EV-031 | Spec v0 contradicted the policy text for in-transit parcels before day 21 | §2.4: refuse under POL-5.3, not POL-4.5 |
 | Refund instead of conflict | EV-018 | Carrier record without elapsed days; POL-4.2 skipped silently | §2.4: `incomplete_evidence` → `unknown` |
 
-The prototype at tag `eval-v0` implements v0. v2 is rebuilt from this spec and must be evaluated on a **fresh** held-out slice (the 200-case set planned for Session 5), not on EV-021–EV-050, which have now been read while writing these changes.
+The prototype at tag `eval-v0` implements v0. v2 is rebuilt from this spec and must be evaluated on a **fresh** held-out slice (EV-051 to EV-100 of evals/eval_set_v1.csv), not on EV-021–EV-050, which have now been read while writing these changes.
+
+## 12. Changes from v2 — every golden-30 disagreement is a line
+
+Grading of the golden 30 (21 Nov 2026, `evals/README.md`): A vs B 29/30 = 97 %, judge vs A and B 28/29 = 97 %. Two disagreements, both real defects.
+
+| Disagreement | Case | Cause | Change |
+| --- | --- | --- | --- |
+| A and judge EDIT, B EXECUTE | EV-046 | POL-6.3 requires the earlier receipt; the v0 receipt had no field for it | §2.3, §2.4, §3: `prior_receipt_id` read and written on the receipt |
+| A and B EXECUTE, judge FAIL | EV-047 | Policy v1 and spec v2 said "a person decides when the record contradicts the merchant" without saying which contradiction; the judge read it as any claim | §2.4, §4: only a delivery dispute goes to a person; policy `2026-11-v2` says the same |
+
+v3 is not built yet: the prototype at tag `eval-v0` implements v0. v2 and v3 are evaluated together on EV-051 to EV-100, then the judge is re-run on EV-046 and EV-047.

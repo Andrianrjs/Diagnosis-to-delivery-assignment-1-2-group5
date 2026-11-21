@@ -78,7 +78,7 @@ Inside the existing support console, as a decision panel on the refund ticket th
 
 ## 7. Success criterion — one sentence
 
-> By **30 January 2027**, on our **200-case eval-set** (v0 of 20 cases committed with this brief), at least **55 % of automatable sub-€20 refund requests — about 38 % of all sub-€20 requests — receive a decision that two graders would execute without editing**, and **no decision executes a refund without tracking evidence attached to its receipt**.
+> By **30 January 2027**, on our **eval-set v1** (100 cases; v0 of 50 frozen at tag eval-v0), at least **55 % of automatable sub-€20 refund requests — about 38 % of all sub-€20 requests — receive a decision that two graders would execute without editing**, and **no decision executes a refund without tracking evidence attached to its receipt**.
 
 The 55 % is the Base deflection assumption on category 1 in `02_sizing.xlsx` (Inputs row 22), which the sensitivity table on the Decision tab varies from 30 % to 75 %. The 38 % is 0.70 × 0.55 — the automatable share times the deflection rate.
 
@@ -90,13 +90,13 @@ The 55 % is the Base deflection assumption on category 1 in `02_sizing.xlsx` (In
 - **Merchants learning the €20 line** and splitting requests under it.
 - **Policy drift** — the refund policy changes and the agent keeps citing a retired clause.
 - **A wrongful refusal pattern** that shows up as churn months later, not as complaints.
-- **Rollback trigger (one line):** if the refunded amount over a rolling 7 days exceeds the pre-agent baseline by more than **€2,000** (~15 % of a normal week's sub-€20 refunds), every case drops to L2 automatically — the agent prepares, a person approves. Rollback is a downgrade, not a shutdown: switching the agent off returns the queue to a three-day wait.
+- **Rollback trigger (one line):** if the refunded amount over a rolling 7 days exceeds the pre-agent baseline by more than **€1,500** (Decision!D6÷ 52, the agent's weekly net value; superseded the €2,000 of v2, seegovernance.md §6), every case drops to L2 automatically — the agent prepares, a person approves. Rollback is a downgrade, not a shutdown: switching the agent off returns the queue to a three-day wait.
 
 ---
 
 ## 9. What the users changed
 
-> **PENDING — the design loop has not been run.** This section is filled only from real conversations and one usability test, per the assignment's explicit rule. See `03_user_research.md` for the guide, the task and the empty evidence tables, which are ready to run.
+> **Not run.** No merchant interview or usability test took place during the course, so no change in this brief comes from users; we did not fill this table with invented evidence. What changed the design instead was the eval: the `policy_exception` stop (EV-050), the clause for parcels in transit (EV-031), the receipt citing the earlier refund (EV-046). The guide and the task are ready in `03_user_research.md`; the first five interviews are a condition of step 1 in `08_launch_memo.md`.
 
 | Change | Evidence (who said / did what) |
 |---|---|

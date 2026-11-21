@@ -172,3 +172,9 @@ Written against `05_metrics.md` §3.
 - **Segments reported:** language (FR · EN · other), plan (standard · high-volume · enterprise), amount band (< €20 · €20–100 · > €100), carrier status. Fairness metric: selection-rate parity by language and plan, read with equal error rates. Known gap, chosen: requests outside FR and EN are never decided, and are protected by the "person reached" guardrail.
 - **Harm threshold that stops the rollout:** "If, on any language or plan segment, the wrongful-refusal rate exceeds that segment's pre-agent human rate, or the abstention guardrail records a decided human-only case, over two consecutive weeks, the agent drops to L2 (prepare only) on that segment until the gap is explained. Owner: Head of Support Operations; reviewed with Legal monthly."
 - **Prerequisite:** v0 has no per-segment switch (`04_architecture.md` §6); the threshold above needs one in `spec.md`.
+
+## Sessions 6-7 — experiments and operation
+
+- **Experiments on real users.** Any experiment on real merchants is signed by the Head of Support Operations and read by Legal before it starts; the decision rule and the harm threshold are written before the first unit (`06_07_experiments_operations.md` §2).
+- **The switch.** The Head of Support Operations can move the system to suggest-only (`SWITCH_DOWNGRADE`, every refund prepared at L2) or off, by day; the automatic leakage and invariant triggers by night. Last tested 17 November 2026, next test before the first real merchant enters shadow mode.
+- **The trace.** One line per output, kept 10 years at the receipt log (an accounting record, Code de commerce art. L123-22); full step traces 90 days in Phoenix, to cover the 90-day churn read. Proposed, to be confirmed by Finance and Legal. Legal answers a customer or a regulator from it.

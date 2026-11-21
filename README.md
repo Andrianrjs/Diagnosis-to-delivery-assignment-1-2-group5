@@ -43,7 +43,8 @@ the agent prepares, a human approves.
 | `evals/` | Eval-set v0 (50 cases) and v1 (100 cases), grading guideline, judge prompt, golden-30 grading sheet, `results_v0.csv`, `report_v0.md` (95 % vs 55 %, FAIL on EV-050) |
 | `04_architecture.md` | Assignment 4 — diagram, components, workflow vs agent, fallbacks, switch, data, eval result |
 | `05_metrics.md` | Assignment 5 — metrics stack, stop criterion, hierarchy by segment, three business metrics, evaluation plan |
-| `course/` | Course instructions (Sessions 4 and 5), for reference |
+| course/ | Course instructions (Sessions 4, 5 and 6-7), for reference |
 | `paylo-copilot-demo/` | The instructor's Paylio demo, kept for reference only — not our prototype |
+| 06_07_experiments_operations.md | Assignment 6-7 — hypotheses, unit, design, decision rule, four-layer monitoring, trace, incidents, rollback, owners |
 
 Run the eval from the repo root: `python3 prototype/evals.py`

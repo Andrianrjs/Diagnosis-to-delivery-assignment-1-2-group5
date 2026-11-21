@@ -64,7 +64,7 @@ Rollback triggers (any one moves every case to L2):
 
 ## Assignment 1 — the six governance questions (provisional)
 
-Status legend: ✅ answered · 🔍 to check before launch
+Status legend:  answered · 🔍 to check before launch
 
 **1. EU AI Act risk tier — Limited risk (provisional).**
 The agent decides shipping-label refunds for business customers. It is not in Annex III:
@@ -178,3 +178,9 @@ Written against `05_metrics.md` §3.
 - **Experiments on real users.** Any experiment on real merchants is signed by the Head of Support Operations and read by Legal before it starts; the decision rule and the harm threshold are written before the first unit (`06_07_experiments_operations.md` §2).
 - **The switch.** The Head of Support Operations can move the system to suggest-only (`SWITCH_DOWNGRADE`, every refund prepared at L2) or off, by day; the automatic leakage and invariant triggers by night. Last tested 17 November 2026, next test before the first real merchant enters shadow mode.
 - **The trace.** One line per output, kept 10 years at the receipt log (an accounting record, Code de commerce art. L123-22); full step traces 90 days in Phoenix, to cover the 90-day churn read. Proposed, to be confirmed by Finance and Legal. Legal answers a customer or a regulator from it.
+
+## Session 8 — who signs the launch
+
+- This launch (conditional go to step 0, shadow mode on sub-€20 FR and EN requests, from 7 December 2026) is signed by the Head of Support Operations and Finance; Legal has read the protocol.
+- Merchants receive the agent's decision directly when it settles a refund under €20 alone (L4), so they are told it was automated: the first line of every receipt reads "This decision was made automatically by LabelFlow's refund assistant. Reply or click 'Talk to a person' to reach our team." (EU AI Act art. 50, from 2 August 2026). Refusals and refunds from €20 are approved by a person before they are sent.
+- The rollback plan (06_07 §4) was last tested on 17 November 2026 by Raveloarimanga Rajesy Ny Andrian; next test: before shadow mode starts, 7 December 2026.

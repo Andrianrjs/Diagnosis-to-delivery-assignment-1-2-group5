@@ -10,7 +10,7 @@
 
 ## 2 · Evidence
 
-- Eval v0, held-out (20 automatable sub-€20 cases): **19/20 = 95 % executable as is** against the criterion **55 %**, but **FAIL** on one floor: one human-only case decided (EV-050, a policy exception written in prose). `spec.md` v2 adds the stop; not yet re-evaluated. Eval v1: 100 cases built, golden 30 graded by two graders and a judge, agreement **97 % / 97 %** (`evals/README.md`); EV-051 to EV-100 never run.
+- Eval v0, held-out (20 automatable sub-€20 cases): **19/20 = 95 % executable as is** against the criterion **55 %**, but **FAIL** on one floor: one human-only case decided (EV-050, a policy exception written in prose). `spec.md` v2 adds the stop and v3 the fixes for EV-046 and EV-047; neither is built nor re-evaluated yet. Eval v1: 100 cases built, golden 30 graded by two graders and a judge, agreement **97 % / 97 %** (`evals/README.md`); EV-051 to EV-100 never run.
 - Guardrails: **0** refunds without tracking evidence / **0** refunds ≥ €20 settled alone / **1** decision on a human-only case, checked 17 November 2026 (`report_v0`).
 - What the A/B will prove: variable cost per sub-€20 request from **€7.00** to at most **€5.5** (expected €4.9); ≈ **2,250 requests per arm** (≈ 1,125 a week, `Upside!D8`, over 4 weeks, randomised by merchant); duration **4 weeks + the 7-day reopen window**, because "settled and uncontested" and the monthly leakage reconciliation are the slowest guardrails (`06_07` §2).
 - Sizing: base **−€84k** a year vs hurdle **+€180k** (the self-serve refund-status page); EV **−€73k** (scenarios −€273k / −€84k / +€148k, weighted 0.25 / 0.50 / 0.25); do-nothing **+€84k**. Below do-nothing at every deflection from 30 % to 75 % (`Decision!A32:E36`).
@@ -19,9 +19,9 @@
 
 | Step | Scope | Duration | Gate (metric · threshold · read date) | Signs the next step |
 | --- | --- | --- | --- | --- |
-| 0 | shadow, staging: the agent decides, a person decides as today, nothing executed | 2 weeks, from 7 Dec 2026 | eval v1 fresh slice: 0 invariant breaches and ≥ 55 % executable · shadow agreement ≥ 55 % · rollback tested (17 Nov 2026) · export shows the volume · read 21 Dec 2026 | Head of Support Operations + Finance |
+| 0 | shadow, staging: the agent decides, a person decides as today, nothing executed | 2 weeks, from 7 Dec 2026 | eval v1 fresh slice: 0 invariant breaches and ≥ 55 % executable · shadow agreement ≥ 55 % · rollback re-tested on the v3 build in staging (last test: 17 Nov 2026, on eval-v0) · export shows the volume · read 21 Dec 2026 | Head of Support Operations + Finance |
 | 1 | 5 % of FR and EN merchants | 1 week | 0 refunds without evidence · 0 refunds ≥ €20 alone · 0 "should have gone to a person" in the weekly L4 sample | Head of Support Operations |
-| 2 | the A/B, 50 % of merchants | 4 weeks + 7 days | cost per request ≤ €5.5 · leakage ≤ €1.5k every week · a person reached no worse than control · ship / iterate / kill on day 35 (`06_07` §2) | Head of Support Operations + Finance, Legal reads |
+| 2 | the A/B on FR and EN merchants, 50 % treatment / 50 % control | 4 weeks + 7 days | cost per request ≤ €5.5 · leakage ≤ €1.5k every week · a person reached no worse than control · ship / iterate / kill on day 35 (`06_07` §2) | Head of Support Operations + Finance, Legal reads |
 | 3 | 100 % with a 5 % holdout of merchants | 6 months | monthly: four layers green (`06_07` §3), drift review at each policy change, 90-day churn read | agent product owner |
 
 ## 4 · Rollback & the switch
